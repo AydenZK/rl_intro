@@ -9,9 +9,10 @@ from gym.spaces import Box, Discrete
 
 DISCRETE_ACTION_SPACE = True
 
-class Connect4Env(Env):
+class Connect4Random(Env):
+    """Playing in a single player env where the opponent takes random actions"""
     def __init__(self):
-        super(Connect4Env, self).__init__()
+        super(Connect4Random, self).__init__()
         if DISCRETE_ACTION_SPACE:
             self.action_space = Discrete(7) # discrete action space
         else:
